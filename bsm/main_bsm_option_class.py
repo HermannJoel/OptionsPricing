@@ -7,3 +7,14 @@ if __name__ == "__main__":
     value
     o.imp_vol(C0=value)
     o.vega()
+    
+if __name__ == "__main__":
+    S = 100
+    X = 110
+    r = 0.05
+    sigma = 0.2
+    T = 1
+    option_type = "call"
+    n = 10000
+    probability = probability_of_touch(S, X, r, sigma, T, option_type, n)
+    print(f"Estimated probability of touch: {probability: .2%}")
